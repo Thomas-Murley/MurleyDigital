@@ -1,0 +1,14 @@
+node_modules
+.next
+out
+.vercel
+*.log
+.env
+.env.local
+.env*.local
+data/store.json
+data/store.json.tmp
+data/session-secret
+data/generated-admin-password.txt
+.DS_Store
+tsconfig.tsbuildinfo
