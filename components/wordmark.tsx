@@ -1,13 +1,18 @@
 "use client";
 
-export function Wordmark({ inverse = false, href = "/" }: { inverse?: boolean; href?: string }) {
+export function Wordmark({
+  inverse = false,
+  href = "/",
+  large = false,
+}: {
+  inverse?: boolean;
+  href?: string;
+  large?: boolean;
+}) {
+  const className = `logo-link${inverse ? " inverse" : ""}${large ? " large" : ""}`;
   return (
-    <a className={inverse ? "wordmark inverse" : "wordmark"} href={href}>
-      <span className="mark" aria-hidden="true">
-        M
-      </span>
-      <span>Murley</span>
-      <small>Digital</small>
+    <a className={className} href={href}>
+      <img src="/logo.png" alt="Murley Digital" width={910} height={640} />
     </a>
   );
 }

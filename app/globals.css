@@ -98,40 +98,19 @@ h3 { font-size: 1.35rem; margin: 0 0 0.4rem; }
 .cluster { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; }
 .stack { display: flex; flex-direction: column; gap: 0.85rem; }
 
-.wordmark {
+.logo-link {
   display: inline-flex;
-  align-items: baseline;
-  gap: 0.45rem;
+  align-items: center;
+  line-height: 0;
   text-decoration: none;
-  color: var(--ink);
-  font-family: var(--serif);
-  font-size: 1.35rem;
-  letter-spacing: -0.03em;
 }
-.wordmark small {
-  font-family: var(--sans);
-  font-size: 0.68rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: var(--muted);
+.logo-link img {
+  height: 72px;
+  width: auto;
+  display: block;
 }
-.mark {
-  width: 1.4rem;
-  height: 1.4rem;
-  display: inline-grid;
-  place-items: center;
-  background: var(--forest);
-  color: var(--gold);
-  border-radius: 5px;
-  font-family: var(--sans);
-  font-size: 0.78rem;
-  font-weight: 600;
-  position: relative;
-  top: 3px;
-}
-.wordmark.inverse { color: #f4efe6; }
-.wordmark.inverse small { color: rgba(244, 239, 230, 0.68); }
-.wordmark.inverse .mark { background: var(--gold); color: var(--forest); }
+.logo-link.large img { height: 104px; }
+.logo-link.inverse img { filter: invert(1); }
 
 .nav {
   position: sticky;
@@ -145,7 +124,7 @@ h3 { font-size: 1.35rem; margin: 0 0 0.4rem; }
   grid-template-columns: auto 1fr auto;
   gap: 1rem;
   align-items: center;
-  min-height: 76px;
+  min-height: 92px;
 }
 .nav-links { display: flex; justify-content: center; gap: 1.15rem; align-items: center; }
 .nav-links a { text-decoration: none; color: var(--muted); font-size: 0.95rem; }
@@ -684,6 +663,8 @@ input:focus, select:focus, textarea:focus { border-color: var(--forest); box-sha
 }
 
 @media (max-width: 860px) {
+  .logo-link img { height: 58px; }
+  .logo-link.large img { height: 84px; }
   .nav-links {
     display: none;
     position: fixed;

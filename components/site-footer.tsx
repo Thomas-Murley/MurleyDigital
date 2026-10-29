@@ -7,7 +7,7 @@ export function SiteFooter({ profile }: { profile: Profile }) {
     <footer className="block rule">
       <div className="wrap split">
         <div>
-          <Wordmark />
+          <Wordmark large />
           <p className="lede" style={{ marginTop: "1rem" }}>
             {profile.tagline} Design, engineering, and the hosting that follows.
           </p>
